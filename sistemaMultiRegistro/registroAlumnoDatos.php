@@ -14,15 +14,47 @@ if(isset($_POST['registraAlumno'])){
             date_default_timezone_set("America/Mexico_City");
             DateTimeInterface::RFC1123;
             $fechaRegistroAlumno = date(DATE_RFC1123);
+            $id_unicoPro = $_POST['id_UnicoPro'];
+            $clavePlantel=$_POST['clavePlantel'];
 
             $NumAleFo = rand(9999, 99999);
-            $id_UnicoAlum = "PRO";
+            $id_UnicoAlum = "ALUM";
             $id_UnicoAlum .= $NumAleFo;
 
+            $envioDatosAlumnos = "INSERT INTO alumnos(id_UnicoAlum,primerNomBeca,segundoNomBeca,apellidoPaterBeca
+            ,apellidoMaterBeca,celular,correoElec,id_UnicoPro,clavePlantel,fechaRegistro)
+             VALUE('$id_UnicoAlum','$primerNomBeca','$segundoNomBeca','$apellidoPaterBeca','$apellidoMaterBeca',
+            '$celular','$correoElec','$id_unicoPro','$clavePlantel','$fechaRegistroAlumno') ";
+
+                        $envioQuery = mysqli_query($coneccion,$envioDatosAlumnos);
+
+                        if ($envioQuery) {
+                            ?>
+
+                            <h3 class="ok"> ¡Registro correcto! </h3>
+                        <?php
+                            echo "Funciona";
+                        } else {
+                        ?>
+
+                            <h3 class="ok"> ¡Registro Incorrecto! </h3>
+                        <?php
+                            echo " No Funciona";
+                        }
             
 
 
+    }else {
+
+        //verifica que los campos esten llenos de no estarlos manda el siguiente mensaje 
+        //la clase bad es para el css manda un mensaje en rojo
+        ?>
+        <h3 class="bad">¡Rellene todos los campos! </h3>
+        <?php
+
     }
+
+    
 
 
 }

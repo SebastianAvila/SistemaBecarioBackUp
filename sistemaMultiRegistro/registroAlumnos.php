@@ -19,12 +19,12 @@
         <a href="registroPlanteles.php">
           <li>Planteles</li>
         </a>
-        <a href="relacionAlumnoServicio.php">
-          <li>Tipo de alumnos</li>
-        </a>
         <a href="registroPrograma.php">
           <li>Registrar tipo de Programa </li>
         </a>
+        <a href="../index.html"> 
+          <li>Cerrar Sesion</li>
+          </a>
 
       </ul>
     </nav>
@@ -47,7 +47,7 @@
   <input type="text" name="apellidoMaterBeca" id="apellidoMaterBeca" placeholder="Obligatorii*">
 
   <h3>Celular a 10 digitos</h3>
-  <input type="text" name="celular " id="celular" placeholder="Lada + 7 numeros restantes">
+  <input type="text" name="celular" id="celular" placeholder="Lada + 7 numeros restantes">
 
   <h3>Correo Electronico</h3>
   <input type="text" name="correoElec" id="correoElec" placeholder="corrre@jemplo.com">

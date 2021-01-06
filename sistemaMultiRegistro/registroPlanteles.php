@@ -18,12 +18,12 @@
         <a href="registroPlanteles.php">
           <li>Planteles</li>
         </a>
-        <a href="relacionAlumnoServicio.php">
-          <li>Tipo de alumnos</li>
-        </a>
         <a href="registroPrograma.php">
           <li>Registrar tipo de Programa </li>
         </a>
+        <a href="../index.html"> 
+          <li>Cerrar Sesion</li>
+          </a>
 
       </ul>
     </nav>
