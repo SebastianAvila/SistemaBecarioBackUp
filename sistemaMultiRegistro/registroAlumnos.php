@@ -51,6 +51,12 @@
 
   <h3>Correo Electronico</h3>
   <input type="text" name="correoElec" id="correoElec" placeholder="corrre@jemplo.com">
+
+  <h3>usuario para su login </h3>
+  <input type="text" name="usuarioBecario" id="usuarioBecario" placeholder=" datos+@becario.uady.mx">
+
+  <h3>Password</h3>
+  <input type="text" name="passwordBecario" id="passwordBecario">
 <br><br>
 
 

@@ -16,6 +16,8 @@ if(isset($_POST['registraAlumno'])){
             $fechaRegistroAlumno = date(DATE_RFC1123);
             $id_unicoPro = $_POST['id_UnicoPro'];
             $clavePlantel=$_POST['clavePlantel'];
+            $usuarioBecario = $_POST['usuarioBecario'];
+            $passwordBecario = $_POST['passwordBecario'];
 
             $NumAleFo = rand(9999, 99999);
             $id_UnicoAlum = "ALUM";
@@ -26,9 +28,13 @@ if(isset($_POST['registraAlumno'])){
              VALUE('$id_UnicoAlum','$primerNomBeca','$segundoNomBeca','$apellidoPaterBeca','$apellidoMaterBeca',
             '$celular','$correoElec','$id_unicoPro','$clavePlantel','$fechaRegistroAlumno') ";
 
-                        $envioQuery = mysqli_query($coneccion,$envioDatosAlumnos);
+                        $envioQuery = mysqli_query($coneccion,$envioDatosAlumnos);            
+            $envioCuentaBecario = "INSERT INTO becariocuenta( user_becario,id_UnicoAlum,pass_becario) VALUES ('$usuarioBecario','$id_UnicoAlum', '$passwordBecario')";
+            $envioCuentaQuery = mysqli_query($coneccion,$envioCuentaBecario);            
 
-                        if ($envioQuery) {
+            
+
+                        if ($envioQuery and $envioCuentaQuery) {
                             ?>
 
                             <h3 class="ok"> ¡Registro correcto! </h3>

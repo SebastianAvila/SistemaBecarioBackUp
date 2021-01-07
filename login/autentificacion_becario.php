@@ -34,7 +34,7 @@
         die("Connection Failed : ".mysqli_connect_error());
     }
 
-    $sql= "SELECT * FROM db_becario.becariocuenta WHERE user_becario='".$becario_username."' AND pass_becario='".$becario_password."'";
+    $sql= "SELECT * FROM sistemabecario.becariocuenta WHERE user_becario='".$becario_username."' AND pass_becario='".$becario_password."'";
     $query= mysqli_query($conn, $sql);
 
 
