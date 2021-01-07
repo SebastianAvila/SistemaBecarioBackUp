@@ -41,7 +41,7 @@
 
     if(mysqli_num_rows($query)==1)
     {
-        header("location:sebasteamoXD.html");
+        header("location:sebasteamtroXD.html");
         
     }
     else
