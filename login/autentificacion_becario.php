@@ -1,9 +1,8 @@
 <?php
-    // Credentials
-    $hostname= "localhost";
-    $username= "root";
-    $password= "";
-    $database= "sistemabecario";
+
+include("../coneccionBaseDatos/coneccionEnvio.php");
+
+
 
 
     // UserInput Test
@@ -25,17 +24,14 @@
     $becario_password= test_input($_POST['be_contra']);
 
 
-    //Establish Connection
-    $conn= mysqli_connect($hostname, $username, $password, $database);
-
     //Check
-    if(!$conn)
+    if(!$coneccion )
     {
         die("Connection Failed : ".mysqli_connect_error());
     }
 
     $sql= "SELECT * FROM sistemabecario.becariocuenta WHERE user_becario='".$becario_username."' AND pass_becario='".$becario_password."'";
-    $query= mysqli_query($conn, $sql);
+    $query= mysqli_query($coneccion , $sql);
 
 
 
@@ -49,7 +45,7 @@
          header("location:errorContraBecario.html");
     }
 
-    mysqli_close($conn);
+    mysqli_close($coneccion );
 
     }
 ?>
