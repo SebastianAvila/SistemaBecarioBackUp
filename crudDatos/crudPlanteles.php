@@ -47,6 +47,7 @@
             <?php } ?>
             </tbody>
         </table>
+        <a href="../seleccionAdmin.html"> <input type="button" value="Regresar"></a>
         </div>
   </div>
 

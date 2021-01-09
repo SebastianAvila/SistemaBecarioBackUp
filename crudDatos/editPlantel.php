@@ -49,8 +49,10 @@ if (isset($_POST['editarPlantel'])) {
 
 <form action="editPlantel.php?clavePlantel=<?php echo $_GET['clavePlantel']; ?>" method="POST">
 
-<input type="text" name="clavePlantel" id="clavePlantel" value="<?php echo $clavePlantel ?>">
+<input type="text" name="clavePlantel" id="clavePlantel" value="<?php echo $clavePlantel ?>" style="display: none;">
+<h3>Localidad</h3>
 <input type="text" name="localidad" id="localidad" value="<?php echo $localidad ?>">
+<h3>Nombre Plantel</h3>
 <input type="text" name="nombrePlantel" id="nombrePlantel" value="<?php echo $nombre ?>">
 
 
