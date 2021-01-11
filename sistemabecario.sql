@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-01-2021 a las 23:12:58
+-- Tiempo de generación: 11-01-2021 a las 04:04:33
 -- Versión del servidor: 10.4.16-MariaDB
 -- Versión de PHP: 7.4.12
 
@@ -64,7 +64,8 @@ CREATE TABLE `alumnos` (
 --
 
 INSERT INTO `alumnos` (`id_UnicoAlum`, `primerNomBeca`, `segundoNomBeca`, `apellidoPaterBeca`, `apellidoMaterBeca`, `celular`, `correoElec`, `id_UnicoPro`, `clavePlantel`, `fechaRegistro`) VALUES
-('PRO14745', 'jesus', 'sebastian', 'aguayo', 'avila', 2147483647, 'jesusaviala@gmail.com', 'PRO98101', '344FDFT', 'Wed, 06 Jan 2021 15:55:41 -060');
+('ALUM57103', 'Alexander 2', 'Jesus ', 'Amaen', 'avila', 9834313, 'efhurfefef@grfr', 'PRO36323', 'wefwefewf', ''),
+('ALUM14007', 'Aaron ', 'Eje', 'Can', 'Caa', 9823443, 'abf@rg', 'PRO36323', 'wefwefewf', 'Sun, 10 Jan 2021 20:39:21 -060');
 
 -- --------------------------------------------------------
 
@@ -74,6 +75,7 @@ INSERT INTO `alumnos` (`id_UnicoAlum`, `primerNomBeca`, `segundoNomBeca`, `apell
 
 CREATE TABLE `becariocuenta` (
   `user_becario` varchar(50) NOT NULL,
+  `id_UnicoAlum` varchar(20) NOT NULL,
   `pass_becario` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -81,9 +83,14 @@ CREATE TABLE `becariocuenta` (
 -- Volcado de datos para la tabla `becariocuenta`
 --
 
-INSERT INTO `becariocuenta` (`user_becario`, `pass_becario`) VALUES
-('alexis', 'alexarmandomdx@gmail.com'),
-('sebastian', 'jesusaviala@gmail.com');
+INSERT INTO `becariocuenta` (`user_becario`, `id_UnicoAlum`, `pass_becario`) VALUES
+('alexis', '', 'alexarmandomdx@gmail.com'),
+('sebastian', '', 'jesusaviala@gmail.com'),
+('a18016880@becario.uady.mx', 'ALUM59457', 'sebastian13'),
+('a18016880@becario.uady.mx', 'ALUM34475', 'sebastian13'),
+('efefef', 'ALUM70502', 'fefe'),
+('efefef', 'ALUM57103', 'sebastian13'),
+('efnief', 'ALUM14007', 'fefojef');
 
 -- --------------------------------------------------------
 
@@ -103,11 +110,10 @@ CREATE TABLE `planteles` (
 --
 
 INSERT INTO `planteles` (`clavePlantel`, `localidad`, `nombrePlantel`, `fechaRegistro`) VALUES
-('344FDFT', 't', 'CHILAM BALAM', 'Tue, 05 Jan 2021 21:35:06 -060'),
-('SDET44FED', 'Tizimin Yucatan Mexico', 'UADY tizimin', 'Tue, 05 Jan 2021 21:35:17 -060'),
-('eewas34', 'Tizimin Yucatan Mexico', 'TECNICA 4 ', 'Tue, 05 Jan 2021 21:35:31 -060'),
+('SDET44FED', 'Cancun Quintana Roo', 'Constitucion de 1917', 'Tue, 05 Jan 2021 21:35:17 -060'),
+('eewas34', 'Cancun Quintana Roo', 'Chilam Balam 23', 'Tue, 05 Jan 2021 21:35:31 -060'),
 ('wefwefewf', 'Cancun', 'Patria nueva', 'Tue, 05 Jan 2021 23:26:31 -060'),
-('FGTWEW34', 'Cancun Mexico', 'TECNICA 31', 'Wed, 06 Jan 2021 15:59:43 -060');
+('FGTWEW34', 'Cancun Mexico', 'TECNICA 34', 'Wed, 06 Jan 2021 15:59:43 -060');
 
 -- --------------------------------------------------------
 
@@ -130,12 +136,12 @@ CREATE TABLE `programas` (
 --
 
 INSERT INTO `programas` (`id_UnicoPro`, `tipoProgra`, `horasCubrir`, `fechaInicioBeca`, `fechaFinBeca`, `clavePlantel`, `fechaRegistro`) VALUES
-('PRO98101', 'Practicas Profesionales', 1, '2021-01-14', '2021-01-14', '344FDFT', 'Tue, 05 Jan 2021 22:32:10 -060'),
+('PRO98101', 'Practicas Profesionales', 135, '2021-01-14', '2021-01-14', 'FGTWEW34', ''),
 ('PRO36323', 'Residencia ', 30, '2021-01-06', '2021-02-24', 'wefwefewf', 'Tue, 05 Jan 2021 23:27:37 -060'),
-('PRO11261', 'Residencia ', 400, '2021-01-13', '2021-01-14', 'FGTWEW34', 'Wed, 06 Jan 2021 16:00:01 -060'),
-('PRO26912', 'Practicas Profesionales', 2, '2021-01-21', '2021-01-15', 'FGTWEW34', 'Wed, 06 Jan 2021 16:00:38 -060');
+('PRO11261', 'Practicas Profesionales', 4003, '2021-01-14', '2021-01-15', 'SDET44FED', '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+sddddddd
