@@ -2,14 +2,15 @@
 
 include("coneccionBaseDatos/coneccionEnvio.php");
 
-$clavePlantel ="eewas34";
-$consulta= "SELECT nombrePlantel FROM planteles WHERE clavePlantel='$clavePlantel'";
 
-$resu = mysqli_query($coneccion,$consulta);
+$clavePlantel = "eewas34"; 
 
-while($row = mysqli_fetch_array($resu)){
-    ?> <p> Plantel Elejido Anteriormente  : <?php echo $row['nombrePlantel'] ?></p> <?php 
-
+$consultaPlantel= "SELECT nombrePlantel FROM planteles WHERE clavePlantel='$clavePlantel'";
+$consultaPlantelQuery = mysqli_query($coneccion,$consultaPlantel);
+if (mysqli_num_rows($consultaPlantelQuery) == 1) {
+    $rowe = mysqli_fetch_array($consultaPlantelQuery);
+    $nombrePlantel = $rowe['nombrePlantel'];
 }
 
+echo $nombrePlantel;
 ?>

@@ -70,7 +70,7 @@ if (isset($_POST['enviaPrograma'])) {
 <form action="editProgramas.php?id_UnicoPro=<?php echo $_GET['id_UnicoPro']; ?>" method="POST">
 
     <div>
-        <h3>ID</h3>  
+      
         <input type="text" name="id_UnicoPro" id="id_UnicoPro" style="display: none;" value="<?php echo $id_UnicoPro ?>">
     
       <h3>Programas </h3>

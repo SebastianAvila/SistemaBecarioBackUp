@@ -19,7 +19,4 @@ $id=$_POST['id'];
 
 ?>
 
-<?php
-include("registroAlumnoDatos.php");
 
-?>
